@@ -15,10 +15,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-grid-pattern bg-[size:60px_60px] opacity-[0.04]" />
         
         {/* Abstract line graph decoration */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.03]" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-          <path d="M0,400 Q200,350 400,380 T800,320 T1200,360" stroke="hsl(185 60% 50%)" strokeWidth="2" fill="none" />
-          <path d="M0,500 Q300,450 600,480 T1200,420" stroke="hsl(185 60% 50%)" strokeWidth="1.5" fill="none" />
-          <path d="M0,300 Q150,280 300,300 T600,260 T900,290 T1200,250" stroke="hsl(200 70% 45%)" strokeWidth="1" fill="none" />
+        <svg className="absolute inset-0 w-full h-full opacity-[0.04]" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <path d="M0,400 Q200,350 400,380 T800,320 T1200,360" stroke="hsl(330 60% 55%)" strokeWidth="2" fill="none" />
+          <path d="M0,500 Q300,450 600,480 T1200,420" stroke="hsl(330 60% 55%)" strokeWidth="1.5" fill="none" />
+          <path d="M0,300 Q150,280 300,300 T600,260 T900,290 T1200,250" stroke="hsl(270 50% 55%)" strokeWidth="1" fill="none" />
         </svg>
         
         {/* Gradient orbs */}
@@ -45,7 +45,7 @@ const Index = () => {
             </div>
 
             {/* Name & Title */}
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Shreya <span className="text-gradient">Kuthpadi</span>
             </h1>
 
@@ -100,7 +100,7 @@ const Index = () => {
         
         <div className="container-tight relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-sm font-medium text-primary uppercase tracking-wider mb-6">
+            <h2 className="font-display text-sm font-medium text-primary uppercase tracking-wider mb-6">
               About Snapshot
             </h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
@@ -150,7 +150,7 @@ const Index = () => {
               to="/projects"
               className="group p-8 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift"
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                 Projects
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
@@ -165,7 +165,7 @@ const Index = () => {
               to="/about"
               className="group p-8 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift"
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                 About Me
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
@@ -180,7 +180,7 @@ const Index = () => {
               to="/blog"
               className="group p-8 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift"
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                 Blog & Notes
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
@@ -205,7 +205,7 @@ const Index = () => {
         
         <div className="container-tight relative z-10">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Contact Me
             </h2>
             <p className="text-lg text-muted-foreground mb-12">
