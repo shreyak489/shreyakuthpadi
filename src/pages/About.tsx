@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Linkedin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -13,10 +13,31 @@ const About = () => {
         
         <div className="container-tight relative z-10">
           <div className="max-w-3xl mx-auto">
-            {/* Header */}
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-12">
-              About Me
-            </h1>
+            {/* Header with Photo */}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+              {/* Headshot */}
+              <div className="relative flex-shrink-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-lg">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+                    alt="Shreya Kuthpadi"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                  <span className="text-primary-foreground text-xs font-bold">SK</span>
+                </div>
+              </div>
+              
+              <div>
+                <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4 text-center md:text-left">
+                  About Me
+                </h1>
+                <p className="text-lg text-muted-foreground text-center md:text-left">
+                  Finance & Computer Science | Rutgers Business School–New Brunswick | Class of 2029
+                </p>
+              </div>
+            </div>
 
             {/* Main Content */}
             <div className="prose prose-invert max-w-none space-y-8">
@@ -35,7 +56,7 @@ const About = () => {
 
               {/* Why This Path */}
               <div className="pt-8 border-t border-border">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">
+                <h2 className="font-display text-2xl font-semibold text-foreground mb-6">
                   Why Finance + CS + Math?
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -53,7 +74,7 @@ const About = () => {
 
               {/* What I'm Exploring */}
               <div className="pt-8 border-t border-border">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">
+                <h2 className="font-display text-2xl font-semibold text-foreground mb-6">
                   Current Interests
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -86,7 +107,7 @@ const About = () => {
 
               {/* Philosophy */}
               <div className="pt-8 border-t border-border">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">
+                <h2 className="font-display text-2xl font-semibold text-foreground mb-6">
                   My Approach
                 </h2>
                 <div className="text-muted-foreground leading-relaxed space-y-4">
@@ -101,7 +122,7 @@ const About = () => {
 
               {/* CTA */}
               <div className="pt-8 border-t border-border">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">
+                <h2 className="font-display text-2xl font-semibold text-foreground mb-6">
                   Let's Connect
                 </h2>
                 <p className="text-muted-foreground mb-6">
@@ -111,7 +132,14 @@ const About = () => {
                   <Button variant="hero" asChild>
                     <a href="mailto:shreya.kuthpadi@gmail.com">
                       <Mail className="h-4 w-4 mr-2" />
-                      Get in Touch
+                      Email Me
+                    </a>
+                  </Button>
+                  <Button variant="hero-outline" asChild>
+                    <a href="https://linkedin.com/in/shreyakuthpadi" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="h-4 w-4 mr-2" />
+                      LinkedIn
+                      <ExternalLink className="h-3 w-3 ml-1" />
                     </a>
                   </Button>
                   <Button variant="hero-outline" asChild>
