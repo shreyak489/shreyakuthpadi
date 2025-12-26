@@ -77,7 +77,7 @@ const Index = () => {
                 </Link>
               </Button>
               <Button variant="ghost" size="lg" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/shreya-kuthpadi-44a443263" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
@@ -208,8 +208,8 @@ const Index = () => {
             </p>
 
             {/* Contact Cards */}
-            <div className="grid sm:grid-cols-3 gap-4">
-              <a href="https://linkedin.com/in/shreyakuthpadi" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift">
+            <div className="grid sm:grid-cols-2 gap-4 max-w-md mx-auto">
+              <a href="https://www.linkedin.com/in/shreya-kuthpadi-44a443263" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift">
                 <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <Linkedin className="h-6 w-6" />
                 </div>
@@ -218,25 +218,13 @@ const Index = () => {
                 </span>
               </a>
 
-              <a href="mailto:shreya.kuthpadi@gmail.com" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift">
+              <a href="mailto:shreya.kuthpadi@rutgers.edu" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift">
                 <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <Mail className="h-6 w-6" />
                 </div>
                 <span className="font-medium text-foreground">Email</span>
                 <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
-                  Gmail
-                </span>
-              </a>
-
-              <a href="https://rutgers.joinhandshake.com" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift">
-                <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                  </svg>
-                </div>
-                <span className="font-medium text-foreground">Handshake</span>
-                <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
-                  View Profile <ExternalLink className="h-3 w-3" />
+                  Rutgers Email
                 </span>
               </a>
             </div>

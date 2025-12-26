@@ -131,13 +131,13 @@ const About = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="hero" asChild>
-                    <a href="mailto:shreya.kuthpadi@gmail.com">
+                    <a href="mailto:shreya.kuthpadi@rutgers.edu">
                       <Mail className="h-4 w-4 mr-2" />
                       Email Me
                     </a>
                   </Button>
                   <Button variant="hero-outline" asChild>
-                    <a href="https://linkedin.com/in/shreyakuthpadi" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/shreya-kuthpadi-44a443263" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-4 w-4 mr-2" />
                       LinkedIn
                       <ExternalLink className="h-3 w-3 ml-1" />
