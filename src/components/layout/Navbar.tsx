@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/resume", label: "Resume" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -39,7 +40,7 @@ export function Navbar() {
           to="/"
           className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
         >
-          <span className="text-primary">A</span>R
+          <span className="text-primary">S</span>K
         </Link>
 
         {/* Desktop Navigation */}

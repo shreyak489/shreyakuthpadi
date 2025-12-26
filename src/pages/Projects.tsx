@@ -58,8 +58,12 @@ const projects = [
 const Projects = () => {
   return (
     <Layout>
-      <section className="section-spacing">
-        <div className="container-tight">
+      <section className="section-spacing relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-40 left-0 w-72 h-72 bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
+        
+        <div className="container-tight relative z-10">
           {/* Header */}
           <div className="max-w-2xl mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
