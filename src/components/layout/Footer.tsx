@@ -1,0 +1,38 @@
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const socialLinks = [
+  { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com", label: "GitHub" },
+];
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border bg-card/30">
+      <div className="container-tight py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-center md:text-left">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Alex Rivera. Built with curiosity and code.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-200"
+                aria-label={link.label}
+              >
+                <link.icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
