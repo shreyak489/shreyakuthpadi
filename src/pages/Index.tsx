@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, FileText, Github, Linkedin, ChevronDown } from "lucide-react";
+import { ArrowRight, FileText, Github, Linkedin, ChevronDown, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -8,12 +8,31 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background grid pattern */}
-        <div className="absolute inset-0 bg-grid-pattern bg-[size:60px_60px] opacity-[0.03]" />
+        {/* Abstract background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background" />
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-grid-pattern bg-[size:60px_60px] opacity-[0.04]" />
+        
+        {/* Abstract line graph decoration */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.03]" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <path d="M0,400 Q200,350 400,380 T800,320 T1200,360" stroke="hsl(185 60% 50%)" strokeWidth="2" fill="none" />
+          <path d="M0,500 Q300,450 600,480 T1200,420" stroke="hsl(185 60% 50%)" strokeWidth="1.5" fill="none" />
+          <path d="M0,300 Q150,280 300,300 T600,260 T900,290 T1200,250" stroke="hsl(200 70% 45%)" strokeWidth="1" fill="none" />
+        </svg>
         
         {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/15 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/15 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
+        
+        {/* Dot matrix pattern */}
+        <div className="absolute top-20 right-20 w-40 h-40 opacity-[0.08]">
+          <div className="grid grid-cols-8 gap-3">
+            {[...Array(64)].map((_, i) => (
+              <div key={i} className="w-1 h-1 rounded-full bg-primary" />
+            ))}
+          </div>
+        </div>
 
         <div className="container-tight relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -21,13 +40,13 @@ const Index = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm text-muted-foreground">
-                Rutgers Business School '28
+                Rutgers Business School '29
               </span>
             </div>
 
             {/* Name & Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Alex <span className="text-gradient">Rivera</span>
+              Shreya <span className="text-gradient">Kuthpadi</span>
             </h1>
 
             {/* Positioning Statement */}
@@ -74,8 +93,12 @@ const Index = () => {
       </section>
 
       {/* About Snapshot */}
-      <section className="section-spacing bg-card/30 border-y border-border">
-        <div className="container-tight">
+      <section className="section-spacing relative overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-card/30 to-background" />
+        <div className="absolute inset-0 border-y border-border" />
+        
+        <div className="container-tight relative z-10">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-sm font-medium text-primary uppercase tracking-wider mb-6">
               About Snapshot
@@ -84,7 +107,7 @@ const Index = () => {
               <p>
                 I'm a freshman at <span className="text-foreground">Rutgers Business School–New Brunswick</span> pursuing a double major in{" "}
                 <span className="text-foreground">Finance</span> and{" "}
-                <span className="text-foreground">Computer Science</span> with a minor in Mathematics.
+                <span className="text-foreground">Computer Science</span> with a minor in Mathematics, Class of 2029.
               </p>
               <p>
                 Fascinated by the intersection of quantitative analysis and technology, I'm building a foundation in{" "}
@@ -117,7 +140,10 @@ const Index = () => {
       </section>
 
       {/* Quick Links */}
-      <section className="section-spacing">
+      <section className="section-spacing relative">
+        {/* Geometric overlay */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        
         <div className="container-tight">
           <div className="grid md:grid-cols-3 gap-6">
             <Link
@@ -164,6 +190,75 @@ const Index = () => {
                 Read posts <ArrowRight className="h-4 w-4" />
               </span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="section-spacing relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-card/30 to-transparent" />
+        <div className="absolute inset-0 border-t border-border" />
+        
+        {/* Abstract decoration */}
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        
+        <div className="container-tight relative z-10">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Contact Me
+            </h2>
+            <p className="text-lg text-muted-foreground mb-12">
+              I'm always open to connecting about internships, projects, or learning opportunities.
+            </p>
+
+            {/* Contact Cards */}
+            <div className="grid sm:grid-cols-3 gap-4">
+              <a
+                href="https://linkedin.com/in/shreyakuthpadi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift"
+              >
+                <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <Linkedin className="h-6 w-6" />
+                </div>
+                <span className="font-medium text-foreground">LinkedIn</span>
+                <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                  Connect <ExternalLink className="h-3 w-3" />
+                </span>
+              </a>
+
+              <a
+                href="mailto:shreya.kuthpadi@gmail.com"
+                className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift"
+              >
+                <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <span className="font-medium text-foreground">Email</span>
+                <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                  Gmail
+                </span>
+              </a>
+
+              <a
+                href="https://rutgers.joinhandshake.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover-lift"
+              >
+                <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  </svg>
+                </div>
+                <span className="font-medium text-foreground">Handshake</span>
+                <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                  View Profile <ExternalLink className="h-3 w-3" />
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

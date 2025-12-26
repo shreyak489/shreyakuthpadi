@@ -6,8 +6,12 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <Layout>
-      <section className="section-spacing">
-        <div className="container-tight">
+      <section className="section-spacing relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px]" />
+        
+        <div className="container-tight relative z-10">
           <div className="max-w-3xl mx-auto">
             {/* Header */}
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-12">
@@ -18,9 +22,9 @@ const About = () => {
             <div className="prose prose-invert max-w-none space-y-8">
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  I'm <span className="text-foreground font-medium">Alex Rivera</span>, a freshman at{" "}
+                  I'm <span className="text-foreground font-medium">Shreya Kuthpadi</span>, a freshman at{" "}
                   <span className="text-foreground">Rutgers Business School–New Brunswick</span>{" "}
-                  where I'm pursuing a double major in Finance and Computer Science with a minor in Mathematics.
+                  where I'm pursuing a double major in Finance and Computer Science with a minor in Mathematics, Class of 2029.
                 </p>
 
                 <p>
@@ -105,7 +109,7 @@ const About = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="hero" asChild>
-                    <a href="mailto:contact@example.com">
+                    <a href="mailto:shreya.kuthpadi@gmail.com">
                       <Mail className="h-4 w-4 mr-2" />
                       Get in Touch
                     </a>
