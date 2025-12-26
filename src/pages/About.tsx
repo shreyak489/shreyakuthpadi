@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Linkedin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import headshot from "@/assets/headshot.jpg";
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
               <div className="relative flex-shrink-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+                    src={headshot}
                     alt="Shreya Kuthpadi"
                     className="w-full h-full object-cover"
                   />
