@@ -1,30 +1,50 @@
-import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/resume", label: "Resume" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/#contact", label: "Contact" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#resume", label: "Resume" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Navbar() {
-  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Determine active section
+      const sections = navLinks.map((link) => link.href.slice(1));
+      for (const section of sections.reverse()) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (href: string) => {
+    const sectionId = href.slice(1);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -36,28 +56,28 @@ export function Navbar() {
       )}
     >
       <nav className="container-tight flex items-center justify-between">
-        <Link
-          to="/"
+        <button
+          onClick={() => scrollToSection("#home")}
           className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
         >
           <span className="text-primary">S</span>K
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.href}
-              to={link.href}
+              onClick={() => scrollToSection(link.href)}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200",
-                location.pathname === link.href
+                activeSection === link.href.slice(1)
                   ? "text-primary bg-primary/10"
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               )}
             >
               {link.label}
-            </Link>
+            </button>
           ))}
         </div>
 
@@ -77,19 +97,18 @@ export function Navbar() {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border">
           <div className="container-tight py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.href}
-                to={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => scrollToSection(link.href)}
                 className={cn(
-                  "px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200",
-                  location.pathname === link.href
+                  "px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 text-left",
+                  activeSection === link.href.slice(1)
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 )}
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
           </div>
         </div>
