@@ -3,11 +3,8 @@ import { Layout } from "@/components/layout/Layout";
 import { FileText, Github, Linkedin, Mail, ExternalLink, Download } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import headshot from "@/assets/headshot.jpg";
-
 const Index = () => {
-
-  return (
-    <Layout>
+  return <Layout>
       {/* About Section */}
       <section id="about" className="section-spacing relative overflow-hidden">
         {/* Background decorations */}
@@ -28,11 +25,7 @@ const Index = () => {
                 {/* Headshot */}
                 <div className="relative flex-shrink-0 transition-transform duration-300 hover:scale-105">
                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-lg">
-                    <img
-                      src={headshot}
-                      alt="Shreya Kuthpadi"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={headshot} alt="Shreya Kuthpadi" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <span className="text-primary-foreground text-xs font-bold">SK</span>
@@ -54,7 +47,7 @@ const Index = () => {
             <div className="space-y-8">
               <AnimatedSection delay={200}>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
-                  <p>
+                  <p className="text-secondary-foreground">
                     I'm a freshman at <span className="text-foreground">Rutgers Business School–New Brunswick</span> pursuing a double major in Finance and Computer Science with a minor in Mathematics.
                   </p>
                   <p>
@@ -70,17 +63,22 @@ const Index = () => {
                     Current Interests
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {[
-                      { title: "Quantitative Analysis", desc: "Building models to understand market behavior and financial data" },
-                      { title: "Machine Learning", desc: "Exploring ML applications in finance and predictive modeling" },
-                      { title: "Fintech Innovation", desc: "Exploring how technology is reshaping financial services" },
-                      { title: "Data-Driven Investing", desc: "Learning to extract insights and build systematic strategies" },
-                    ].map((item, i) => (
-                      <div key={i} className="p-5 rounded-xl border border-border bg-card/50 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:-translate-y-1">
+                    {[{
+                    title: "Quantitative Analysis",
+                    desc: "Building models to understand market behavior and financial data"
+                  }, {
+                    title: "Machine Learning",
+                    desc: "Exploring ML applications in finance and predictive modeling"
+                  }, {
+                    title: "Fintech Innovation",
+                    desc: "Exploring how technology is reshaping financial services"
+                  }, {
+                    title: "Data-Driven Investing",
+                    desc: "Learning to extract insights and build systematic strategies"
+                  }].map((item, i) => <div key={i} className="p-5 rounded-xl border border-border bg-card/50 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:-translate-y-1">
                         <h5 className="font-semibold text-foreground mb-2">{item.title}</h5>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </AnimatedSection>
@@ -125,11 +123,9 @@ const Index = () => {
                   Stochastic simulation for stock price projections using geometric Brownian motion and probability distributions.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["NumPy", "pandas", "matplotlib", "Statistics"].map((tool) => (
-                    <span key={tool} className="px-2 py-1 text-xs font-mono rounded bg-secondary text-secondary-foreground">
+                  {["NumPy", "pandas", "matplotlib", "Statistics"].map(tool => <span key={tool} className="px-2 py-1 text-xs font-mono rounded bg-secondary text-secondary-foreground">
                       {tool}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
               </div>
             </AnimatedSection>
@@ -151,11 +147,9 @@ const Index = () => {
                   Predictive modeling using linear regression techniques to analyze financial data and identify trends.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["scikit-learn", "pandas", "NumPy", "Data Analysis"].map((tool) => (
-                    <span key={tool} className="px-2 py-1 text-xs font-mono rounded bg-secondary text-secondary-foreground">
+                  {["scikit-learn", "pandas", "NumPy", "Data Analysis"].map(tool => <span key={tool} className="px-2 py-1 text-xs font-mono rounded bg-secondary text-secondary-foreground">
                       {tool}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
               </div>
             </AnimatedSection>
@@ -237,11 +231,9 @@ const Index = () => {
                           Programming Languages
                         </h5>
                         <div className="flex flex-wrap gap-2">
-                          {["Java", "Python"].map((skill) => (
-                            <span key={skill} className="px-3 py-1.5 text-xs font-mono rounded-md bg-secondary text-secondary-foreground">
+                          {["Java", "Python"].map(skill => <span key={skill} className="px-3 py-1.5 text-xs font-mono rounded-md bg-secondary text-secondary-foreground">
                               {skill}
-                            </span>
-                          ))}
+                            </span>)}
                         </div>
                       </div>
                       <div>
@@ -249,11 +241,9 @@ const Index = () => {
                           Relevant Coursework
                         </h5>
                         <div className="flex flex-wrap gap-2">
-                          {["Multivariable Calculus", "Linear Algebra", "Discrete Math", "Differential Equations"].map((skill) => (
-                            <span key={skill} className="px-3 py-1.5 text-xs rounded-md bg-primary/10 text-primary border border-primary/20">
+                          {["Multivariable Calculus", "Linear Algebra", "Discrete Math", "Differential Equations"].map(skill => <span key={skill} className="px-3 py-1.5 text-xs rounded-md bg-primary/10 text-primary border border-primary/20">
                               {skill}
-                            </span>
-                          ))}
+                            </span>)}
                         </div>
                       </div>
                     </div>
@@ -371,8 +361,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
