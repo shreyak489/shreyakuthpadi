@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#resume", label: "Resume" },
@@ -57,7 +56,7 @@ export function Navbar() {
     >
       <nav className="container-tight flex items-center justify-between">
         <button
-          onClick={() => scrollToSection("#home")}
+          onClick={() => scrollToSection("#about")}
           className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
         >
           <span className="text-primary">S</span>K
