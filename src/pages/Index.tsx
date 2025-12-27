@@ -1,99 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, FileText, Github, Linkedin, ChevronDown, Mail, ExternalLink, Download } from "lucide-react";
+import { FileText, Github, Linkedin, Mail, ExternalLink, Download } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { EmailModal } from "@/components/ui/EmailModal";
-import { useState } from "react";
 import headshot from "@/assets/headshot.jpg";
 
 const Index = () => {
-  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Abstract background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background" />
-        
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-grid-pattern bg-[size:60px_60px] opacity-[0.04]" />
-        
-        {/* Abstract line graph decoration */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.03]" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-          <path d="M0,400 Q200,350 400,380 T800,320 T1200,360" stroke="hsl(185 60% 50%)" strokeWidth="2" fill="none" />
-          <path d="M0,500 Q300,450 600,480 T1200,420" stroke="hsl(185 60% 50%)" strokeWidth="1.5" fill="none" />
-          <path d="M0,300 Q150,280 300,300 T600,260 T900,290 T1200,250" stroke="hsl(200 70% 45%)" strokeWidth="1" fill="none" />
-        </svg>
-        
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/15 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
-        
-        {/* Dot matrix pattern */}
-        <div className="absolute top-20 right-20 w-40 h-40 opacity-[0.08]">
-          <div className="grid grid-cols-8 gap-3">
-            {[...Array(64)].map((_, i) => <div key={i} className="w-1 h-1 rounded-full bg-primary" />)}
-          </div>
-        </div>
-
-        <div className="container-tight relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-muted-foreground">
-                Rutgers Business School '29
-              </span>
-            </div>
-
-            {/* Name & Title */}
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Shreya Kuthpadi
-            </h1>
-
-            {/* Positioning Statement */}
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              Finance and Computer Science student at Rutgers Business School–New Brunswick
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Button variant="hero" size="lg" onClick={() => scrollToSection("projects")} className="transition-transform duration-200 hover:scale-105">
-                View Projects
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="hero-outline" size="lg" onClick={() => scrollToSection("resume")} className="transition-transform duration-200 hover:scale-105">
-                <FileText className="mr-2 h-5 w-5" />
-                Resume
-              </Button>
-              <Button variant="ghost" size="lg" asChild className="transition-transform duration-200 hover:scale-110">
-                <a href="https://www.linkedin.com/in/shreya-kuthpadi-44a443263" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="lg" asChild className="transition-transform duration-200 hover:scale-110">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-
-            {/* Scroll indicator */}
-            <div className="animate-bounce">
-              <ChevronDown className="h-6 w-6 text-muted-foreground mx-auto" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about" className="section-spacing relative overflow-hidden">
         {/* Background decorations */}
@@ -422,7 +336,7 @@ const Index = () => {
 
             {/* Contact Cards */}
             <AnimatedSection delay={100}>
-              <div className="grid sm:grid-cols-2 gap-4 max-w-md mx-auto">
+              <div className="grid sm:grid-cols-3 gap-4 max-w-xl mx-auto">
                 <a href="https://www.linkedin.com/in/shreya-kuthpadi-44a443263" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
                   <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     <Linkedin className="h-6 w-6" />
@@ -433,25 +347,30 @@ const Index = () => {
                   </span>
                 </a>
 
-                <button
-                  onClick={() => setIsEmailModalOpen(true)}
-                  className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                >
+                <a href="https://github.com/shreyak489" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
                   <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
+                    <Github className="h-6 w-6" />
+                  </div>
+                  <span className="font-medium text-foreground">GitHub</span>
+                  <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                    shreyak489 <ExternalLink className="h-3 w-3" />
+                  </span>
+                </a>
+
+                <div className="flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50">
+                  <div className="p-3 rounded-full bg-primary/10 text-primary">
                     <Mail className="h-6 w-6" />
                   </div>
                   <span className="font-medium text-foreground">Email</span>
-                  <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
-                    Send a message
+                  <span className="text-sm text-muted-foreground">
+                    shreya.kuthpadi@rutgers.edu
                   </span>
-                </button>
+                </div>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
-
-      <EmailModal open={isEmailModalOpen} onOpenChange={setIsEmailModalOpen} />
     </Layout>
   );
 };
