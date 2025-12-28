@@ -37,7 +37,7 @@ const Index = () => {
                     Shreya Kuthpadi
                   </h3>
                   <p className="text-lg text-muted-foreground text-center md:text-left">
-                    Finance & Computer Science | Rutgers Business School–New Brunswick | Class of 2029
+                    Computer Science & Finance | Rutgers Business School–New Brunswick | Class of 2029
                   </p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ const Index = () => {
               <AnimatedSection delay={200}>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                   <p className="text-secondary-foreground">
-                    I'm a freshman at <span className="text-foreground">Rutgers Business School–New Brunswick</span> pursuing a double major in Finance and Computer Science with a minor in Mathematics.
+                    I'm a freshman at <span className="text-foreground">Rutgers Business School–New Brunswick</span> pursuing a double major in Computer Science and Finance with a minor in Mathematics.
                   </p>
                   <p>
                     Fascinated by the intersection of quantitative analysis and technology, I'm building a foundation in <span className="text-foreground">data-driven decision making</span> and <span className="text-foreground">algorithmic thinking</span> to tackle complex financial problems.
@@ -67,8 +67,8 @@ const Index = () => {
                     title: "Quantitative Analysis",
                     desc: "Building models to understand market behavior and financial data"
                   }, {
-                    title: "Machine Learning",
-                    desc: "Exploring ML applications in finance and predictive modeling"
+                    title: "IoT",
+                    desc: "Exploring connected devices and smart systems for real-world applications"
                   }, {
                     title: "Fintech Innovation",
                     desc: "Exploring how technology is reshaping financial services"
@@ -200,7 +200,7 @@ const Index = () => {
                         <h5 className="text-lg font-semibold text-foreground">
                           Rutgers Business School–New Brunswick
                         </h5>
-                        <p className="text-muted-foreground">Finance and Computer Science Major</p>
+                        <p className="text-muted-foreground">Computer Science and Finance Major</p>
                         <p className="text-sm text-muted-foreground">Expected 2029</p>
                       </div>
                       <div>
@@ -347,15 +347,15 @@ const Index = () => {
                   </span>
                 </a>
 
-                <a href="mailto:shreyakuthpadi@gmail.com" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
+                <div className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
                   <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     <Mail className="h-6 w-6" />
                   </div>
                   <span className="font-medium text-foreground">Email</span>
-                  <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
-                    shreyakuthpadi@gmail.com
+                  <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
+                    shreya.kuthpadi@rutgers.edu
                   </span>
-                </a>
+                </div>
               </div>
             </AnimatedSection>
           </div>
