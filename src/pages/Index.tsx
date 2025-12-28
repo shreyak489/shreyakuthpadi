@@ -347,13 +347,13 @@ const Index = () => {
                   </span>
                 </a>
 
-                <a href="mailto:ssk281@scarletmail.rutgers.edu" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
+                <a href="mailto:shreyakuthpadi@gmail.com" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
                   <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     <Mail className="h-6 w-6" />
                   </div>
                   <span className="font-medium text-foreground">Email</span>
-                  <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
-                    ssk281@scarletmail.rutgers.edu
+                  <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                    shreyakuthpadi@gmail.com
                   </span>
                 </a>
               </div>
