@@ -51,7 +51,7 @@ const Index = () => {
                     I'm a freshman at <span className="text-foreground">Rutgers Business School–New Brunswick</span> pursuing a double major in Computer Science and Finance with a minor in Mathematics.
                   </p>
                   <p>
-                    Fascinated by the intersection of quantitative analysis and technology, I'm building a foundation in <span className="text-foreground">data-driven decision making</span> and <span className="text-foreground">algorithmic thinking</span> to tackle complex financial problems.
+                    I am fascinated by <span className="text-foreground">quantitative analysis</span> and <span className="text-foreground">artificial intelligence</span>, and am interested in <span className="text-foreground">conducting research</span> and/or <span className="text-foreground">interning</span> in academic or industry settings that emphasize rigorous data-driven innovation.
                   </p>
                 </div>
               </AnimatedSection>
@@ -169,12 +169,9 @@ const Index = () => {
                   <h2 className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                     Resume
                   </h2>
-                  <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground">
                     Experience & Education
                   </h3>
-                  <p className="text-lg text-muted-foreground">
-                    A summary of my education, skills, and experience.
-                  </p>
                 </div>
                 <div className="flex gap-3">
                   <Button variant="hero" asChild className="transition-transform duration-200 hover:scale-105">
@@ -347,7 +344,7 @@ const Index = () => {
                   </span>
                 </a>
 
-                <div className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
+                <a href="mailto:shreya.kuthpadi@rutgers.edu" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300 hover:-translate-y-1">
                   <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     <Mail className="h-6 w-6" />
                   </div>
@@ -355,7 +352,7 @@ const Index = () => {
                   <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
                     shreya.kuthpadi@rutgers.edu
                   </span>
-                </div>
+                </a>
               </div>
             </AnimatedSection>
           </div>
